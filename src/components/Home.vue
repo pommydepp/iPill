@@ -57,10 +57,10 @@
             
           </el-row><!-- end row - map -->
 
-          <el-row :gutter="24" style="margin:30px 2.5% 30px 2.5%;">
+          <el-row :gutter="24" style="margin:50px 2.5% 30px 2.5%;">
             <el-col :sm="4" v-for="(o, index) in drugStore" :key="o" :offset="index > 2 ? 0 : 0">
               <el-card :body-style="{ padding: '0px' }">
-                <img :src="o.drugPic" class="image" style="width: 100%; height:180px;">
+                <img :src="o.drugPic" class="image" style="padding: 30px 0 20px 30px; width: 70%; height:200px; background-position: ;">
                 <div style="padding: 14px;">
                   <p>{{ o.drugName }}</p>
                   <p>{{ o.drugPrice }}</p>
@@ -75,11 +75,36 @@
 
           <el-row :gutter="24" style="margin:30px 2.5% 30px 2.5%;">
             <el-col :md="12">
-            <el-card class="box-card">
-              <div class="text item" style="line-height: 24px; font-size: 13px;">
-                At The Online Drugstore, your favorite health and beauty products are just a click away. Our online drugstore products make it easy to have drugstore items conveniently shipped straight to your door. From over-the-counter medications to diabetic supplies to baby care needs, our selection includes everything you’d find at your local drugstore and more. You’ll be able to easily compare products and read helpful user reviews to find the products that best fit your needs. When you visit our online drugstore, it’s easy to make informed decisions about your health.              </div>
-            </el-card>
+              <el-card class="box-card">
+                <h2 style="font-weight: bold; font-size: 18px; line-height: 28px;">Health Tip: Find Your Resting Heart Rate</h2>
+                <div class="text item" style="line-height: 24px; font-size: 13px;">
+                  A normal resting heart rate is between 60 and 100 beats per minute, but this rate will be affected by a person's stress, caffeine consumption, anxiety, hormones, medication and fitness level, the American Heart Association says. Your resting heart rate is the number of times your heart beats in a minute while you are at rest. The best time to check...                
+                </div>
+              </el-card>
+
+              <el-card class="box-card" style="margin-top: 20px;">
+                <h2 style="font-weight: bold; font-size: 18px; line-height: 28px;">Sun's UV Rays a Threat to Your Eyes, Too</h2>
+                <div class="text item" style="line-height: 24px; font-size: 13px;">
+                  It's not just your skin that needs protection from ultraviolet rays, health experts warn. UV rays from the sun can cause corneal sunburn (photokeratitis) and UV damage that has been linked to macular degeneration, cataracts, cancer and pterygium (a growth on the white part of the eye), according to Prevent Blindness, a nonprofit eye health and safety...
+                </div>
+              </el-card>
+
+              <el-card class="box-card" style="margin-top: 20px;">
+                <h2 style="font-weight: bold; font-size: 18px; line-height: 28px;">Hair Care Products for Black Women May Disrupt Hormones</h2>
+                <div class="text item" style="line-height: 24px; font-size: 13px;">
+                  Many black women use a plethora of hair care products that contain chemicals that can interfere with their hormones, researchers warn. They noted these chemicals could be a reason why black women have higher rates of certain hormone-related health conditions than other women in the United States. For example, black women begin puberty at younger ages,...                
+                </div>
+              </el-card>
+
             </el-col>
+
+            <el-col :md="12">
+              <el-card class="box-card imageApp" style="height: 500px;">
+              </el-card>
+            </el-col>
+
+
+            
           </el-row><!-- end row health content -->
           
     </div>
@@ -95,34 +120,34 @@ export default {
   data(){
     return{
       drugStore:[{
-        drugPic: require('../assets/pharmacy1.jpg'),
-        drugName:'222',
-        drugPrice:'333'
+        drugPic: require('../assets/drug1.jpg'),
+        drugName:'Marijuana',
+        drugPrice:'125฿'
       },
       {
-        drugPic: require('../assets/pharmacy1.jpg'),
-        drugName:'ddfewd',
-        drugPrice:'ewdwqd333'
+        drugPic: require('../assets/drug2.jpg'),
+        drugName:'Macus rerif cough',
+        drugPrice:'135฿'
       },
       {
-        drugPic: require('../assets/pharmacy1.jpg'),
-        drugName:'22qdwqw2',
-        drugPrice:'3dqwq33'
+        drugPic: require('../assets/drug3.jpg'),
+        drugName:'Nature Truth Calcium',
+        drugPrice:'325฿'
       },
       {
-        drugPic: require('../assets/pharmacy1.jpg'),
-        drugName:'ddfewd',
-        drugPrice:'ewdwqd333'
+        drugPic: require('../assets/drug4.jpg'),
+        drugName:'Muro 128',
+        drugPrice:'85฿'
       },
       {
-        drugPic: require('../assets/pharmacy1.jpg'),
-        drugName:'ddfewd',
-        drugPrice:'ewdwqd333'
+        drugPic: require('../assets/drug5.jpg'),
+        drugName:'Zeasorb',
+        drugPrice:'600฿'
       },
       {
-        drugPic: require('../assets/pharmacy1.jpg'),
-        drugName:'ddfewd',
-        drugPrice:'ewdwqd333'
+        drugPic: require('../assets/drug6.jpg'),
+        drugName:'Dayquil',
+        drugPrice:'170฿'
       },
       
       ]
@@ -141,6 +166,12 @@ export default {
   }
   .imageDrug {
     background-image: url("../assets/pharmacy1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+  .imageApp {
+    background-image: url("../assets/app.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
